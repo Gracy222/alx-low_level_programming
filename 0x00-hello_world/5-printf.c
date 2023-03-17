@@ -2,7 +2,7 @@
 
 
 /**
- * main Entry point
+ * Description: main - program to print out string
  *
  * Return: Always 0 (Success)
  * */
