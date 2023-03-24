@@ -1,4 +1,4 @@
-#include "maiin.h"
+#include "main.h"
 /**
  * print_line - function that checks for uppercase character.
  * @n: is the integer for the paramaters of my function
@@ -6,14 +6,15 @@
  */
 void print_line(int n)
 {
-	int a;
+	int x;
 
 	if (n > 0)
 	{
-		for (a = 1 ; a <= n ; a++)
+		for (x = 1 ; x <= n ; x++)
 		{
 			_putchar(95);
+
 		}
-	 _putchar('\n');
 	}
+	_putchar('\n');
 }
