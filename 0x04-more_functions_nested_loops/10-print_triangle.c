@@ -4,6 +4,7 @@
  * @size: the int for the paramaters of my function
  * Return: Always 0.
  */
+
 void print_triangle(int size)
 {
 	int x, y = 0;
@@ -28,7 +29,7 @@ void print_triangle(int size)
 			}
 			y++;
 			x = 0;
-			_putchar ('\n');
+			_putchar('\n');
 		}
 	}
 	else
