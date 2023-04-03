@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * -memset - fills memory with a constant byte.
+ * *_memset - fills memory with a constant byte.
  *  @s: parameter 1
  *  @b: parameter 2
  *  @n: parameter 3
@@ -11,10 +11,11 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	char* p = s;
+	*i = s;
+
 	while (n--)
 	{
-	*p++ = b;
+	*i++ = b;
 	}
-	return s;
+	return (s);
 }
