@@ -1,21 +1,21 @@
 #include "main.h"
 
-/*
- * _puts_recursion - prints a string, followed by a new line.
- * @s: - parameter to be checked
- * Return: - Nothing
+/**
+ * _puts_recursion - print a string
+ * @s:string
+ * Return:void
  */
-
-void _puts_recursion(char *s);
+void _puts_recursion(char *s)
 {
-
-	if (*s != '\n')
+	if (*s)
 	{
-		putchar(*s);
+	_putchar(*s);
 		_puts_recursion(s + 1);
 	}
 	else
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
+
+
 }
