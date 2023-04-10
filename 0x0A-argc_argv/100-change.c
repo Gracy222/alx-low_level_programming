@@ -22,7 +22,10 @@ int main(int argc, char *argv[])
 	val = atoi(argv[1]);
 
 	if (val < 0)
+	{
 		printf("0\n");
+		return (0);
+	}
 	for (h = 0; h < 5; h++)
 	{
 		if (val >= cent[h])
