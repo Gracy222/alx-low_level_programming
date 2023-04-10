@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int val, h;
 	int cash = 0;
-	char cent[5] = {25, 10, 5, 2, 1};
+	int cent[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
