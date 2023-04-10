@@ -20,21 +20,21 @@ int main(int argc, char *argv[])
 	}
 	for (a = 1; a < argc; a++)
 	{
-	
+
 		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-		
+
 			if (argv[a][b] < '0' || argv[a][b] > '9')
 			{
-			
-				printf ("Error\n");
+
+				printf("Error\n");
 				return (1);
 			}
 		}
 		num = atoi(argv[a]);
 		sum = sum + num;
 	}
-	printf ("%d\n", sum);
+	printf("%d\n", sum);
 	return (0);
-			
+
 }
