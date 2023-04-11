@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * create_array - allocate space for an array
  * @size: number of byte to allocate
