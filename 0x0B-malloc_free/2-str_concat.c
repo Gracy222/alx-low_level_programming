@@ -3,8 +3,10 @@
 #include <stdio.h>
 /**
  *  *str_concat - concatenates two strings.
- *  @*s1-int parameter to be concatenated
- *  @*s2-int parameter to be oncatenated
+ *  @s1: are pointers to two null-terminated strings
+ *  that you want to concatenate.
+ *  @s2: are pointers to two null-terminated strings
+ *  that you want to concatenate.
  *
  *  Return: pointer should point to a newly allocated space in memory
  *  or NULL on failure
