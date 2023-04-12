@@ -7,29 +7,30 @@
  *
  * Return: return a pointer of pointer or null
  */
-
 int **alloc_grid(int width, int height)
 {
-	int **grid = malloc(height * sizeof(int *));
+	int i, j;
+	int **a;
 
-	if (grid == NULL)
-	{
+	if (width <= 0 || height <= 0)
 		return (NULL);
-	}
-
-	for (int i = 0; i < height; i++)
+	a = (int **)malloc(sizeof(int *) * height);
+	if (a == NULL)
+		return (NULL);
+	for (i = 0; i < height; i++)
 	{
-		grid[i] = malloc(width * sizeof(int));
-
-	if (grid[i] == NULL
-
-	for (int j = 0; j < i; j++)
-
-	free(grid[j]);
-
-
-	free(grid);
-	return (NULL);
+		a[i] = (int *)malloc(sizeof(int) * width);
+		if (a[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+				free(a[j]);
+			free(a);
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+		{
+			a[i][j] = 0;
+		}
 	}
-
+	return (a);
 }
