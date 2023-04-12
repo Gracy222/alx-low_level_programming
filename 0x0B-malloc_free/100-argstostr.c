@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * wrdcnt - counts the number of words in a string
+ * main - counts the number of words in a string
  * @s: string
  * Return: int of number of words
  */
