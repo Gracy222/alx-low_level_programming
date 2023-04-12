@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#define DELIMITER " "
+
 /**
  * strtow - splits a string into words
  * @str: string
@@ -7,44 +11,20 @@
  */
 char **strtow(char *str)
 {
-	int i, j, k, l, n = 0, ch = 0;
-	char **x;
+	char **words = NULL;
+	char *word = NULL;
+	int i = 0;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
-	n = wrdcnt(str);
-	if (n == 1)
-		return (NULL);
-	 x = (char **)malloc(n * sizeof(char *));
-	if (x == NULL)
-		return (NULL);
-	x[n - 1] = NULL;
-	i = 0;
-	while (str[i])
+	word = strtok(str, DELIMITER);
+		while (word != NULL)
 	{
-		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
-		{
-			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
-				;
-			j++;
-			x[ch] = (char *)malloc(j * sizeof(char));
-			j--;
-			if (x[ch] == NULL)
-			{
-				for (k = 0; k < ch; k++)
-					free(x[k]);
-				free(x[n - 1]);
-				free(x);
-				return (NULL);
-			}
-			for (l = 0; l < j; l++)
-				x[ch][l] = str[i + l];
-			x[ch][l] = '\0';
-			ch++;
-			i += j;
-		}
-		else
-			i++;
+	words = realloc(words, sizeof(char *) * (i + 1));
+	words[i] = word;
+	i++;
+	word = strtok(NULL, DELIMITER);
 	}
-	return (x);
+	words = realloc(words, sizeof(char *) * (i + 1));
+	words[i] = NULL;
+
+	return (words);
 }
