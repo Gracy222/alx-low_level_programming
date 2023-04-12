@@ -1,39 +1,21 @@
 #include <stdio.h>
-#include <errno.h>
-#include <string.h>
 #include <stdlib.h>
+#include "main.h"
 /**
- **argstostr -  a function that concatenates all the arguments of your program.
- *@ac : int
- *@av : array
- *Return: array
+ * free_grid - frees 2d array
+ * @grid: 2d grid
+ * @height: height dimension of grid
+ * Description: frees memory of grid
+ * Return: nothing
+ *
  */
-char *argstostr(int ac, char **av)
+void free_grid(int **grid, int height)
 {
-	int x, y, i, j, l = 0, a = 0;
-	char *s;
+	int i;
 
-	if (ac == 0 || av == NULL)
-	return (NULL);
-	for (i = 0; (i < ac); i++)
+	for (i = 0; i < height; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		l++;
-		l++;
+		free(grid[i]);
 	}
-
-	s = malloc(sizeof(char) * l + 1);
-	if (s == NULL)
-	return (NULL);
-	for (x = 0; x < ac ; x++)
-	{
-		for (y = 0; av[x][y] != '\0'; y++)
-		{
-			s[a] = av[x][y];
-			a++;
-		}
-		s[a++] = '\n';
-	}
-	s[a] = '\0';
-	return (s);
+	free(grid);
 }
