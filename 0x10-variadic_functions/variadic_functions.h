@@ -1,3 +1,4 @@
+#ifndef _VARIADIC_FUNCTIONS_H
 #define _VARIADIC_FUNCTIONS_H
 #include <stdarg.h>
 #include <stdio.h>
@@ -18,6 +19,7 @@ typedef struct characters
 	/* so the pointer points a function that receive va_list) */
         void (*ptrfunc)(va_list);
 } characters;
+
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
