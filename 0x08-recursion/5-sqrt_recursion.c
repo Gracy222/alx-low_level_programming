@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * check - check for the square root
- * @a: int
- * @b: int
+ * @a: integer
+ * @b: integer
  *
- * Return: int
+ * Return: integer
  */
 int check(int a, int b)
 {
