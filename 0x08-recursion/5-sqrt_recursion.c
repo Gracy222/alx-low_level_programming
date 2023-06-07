@@ -14,6 +14,12 @@ int check(int a, int b)
 		return (-1);
 	return (check(a + 1, b));
 }
+/**
+ * _sqrt_recursion - returns square root of a given number
+ * @n: int to find square of a number
+ * Return: square root
+ */
+
 int _sqrt_recursion(int n)
 {
 	if (n == 0)
