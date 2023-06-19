@@ -1,4 +1,11 @@
-#ifndef SUM_H
-#define SUM_H
-#define SUM(x, y) ((x) + (y))
-#endif
+#include <stdio.h>
+/**
+ * main - print file name
+ *
+ * Return:void
+ */
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
+}
