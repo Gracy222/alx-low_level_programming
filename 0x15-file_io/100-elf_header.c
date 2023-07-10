@@ -1,7 +1,3 @@
-/*
- * File: 100-elf_header.c
- */
-
 #include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -184,7 +180,6 @@ void print_osabi(unsigned char *e_ident)
  * print_abi - Prints the ABI version of an ELF header.
  * @e_ident: A pointer to an array containing the ELF ABI version.
  */
-
 void print_abi(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n",
@@ -285,7 +280,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
-		}
+	}
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
@@ -301,7 +296,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
-	
+
 	check_elf(header->e_ident);
 	printf("ELF Header:\n");
 	print_magic(header->e_ident);
