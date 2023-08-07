@@ -6,7 +6,7 @@
  * Return: the converted value
  */
 unsigned int binary_to_uint(const char *b)
-	{
+{
 	unsigned int decimal = 0;
 	int str_len = 0, base = 1;
 
@@ -32,7 +32,7 @@ unsigned int binary_to_uint(const char *b)
  * Return: 1 if string is valid, 0 otherwise
  */
 int check_valid_string(const char *b)
-	{
+{
 	if (b == NULL)
 	return (0);
 
